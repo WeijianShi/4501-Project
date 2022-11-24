@@ -1,4 +1,5 @@
 
+TAXI_TRIPS_SCHEMA = """
 CREATE TABLE IF NOT EXISTS TAXI (
    taxiId INTEGER PRIMARY KEY AUTOINCREMENT,
    tpep_pickup_datetime DATE,
@@ -11,8 +12,10 @@ CREATE TABLE IF NOT EXISTS TAXI (
    distance FLOAT,
    tip_amount FLOAT
 );
+"""
 
-CREATE TABLE IF NOT EXISTS TAXI (
+UBER_TRIPS_SCHEMA = """
+CREATE TABLE IF NOT EXISTS UBER (
    uberId INTEGER PRIMARY KEY AUTOINCREMENT,
    fare_amount FLOAT,
    pickup_datetime DATE,
@@ -23,3 +26,36 @@ CREATE TABLE IF NOT EXISTS TAXI (
    drop_lat FLOAT,
    passenger_count INTEGER
 );
+"""
+
+HOURLY_WEATHER_SCHEMA="""
+CREATE TABLE IF NOT EXISTS HOURLY (
+   REM TEXT PRIMARY KEY, 
+   DATE TEXT,
+   REPORT_TYPE	TEXT,
+   HourlyAltimeterSetting REAL,
+   HourlyDewPointTemperature REAL,
+   HourlyDryBulbTemperature REAL,
+   HourlyRelativeHumidity	REAL,
+   HourlySeaLevelPressure REAL,
+   HourlyVisibility REAL,
+   HourlyWindDirection REAL,
+   HourlyWindSpeed REAL
+
+);
+"""
+
+DAILY_WEATHER_SCHEMA="""
+CREATE TABLE IF NOT EXISTS DAILY(
+   
+   DATE TEXT PRIMARY KEY,
+   DailyAverageDewPointTemperature REAL,
+   DailyAverageDryBulbTemperature REAL,
+   DailyMaximumDryBulbTemperature REAL,
+   DailyMinimumDryBulbTemperature REAL,
+   DailyAverageRelativeHumidity REAL,
+   DailyAverageSeaLevelPressure REAL,
+   DailyAverageWindSpeed REAL,
+   DailyPeakWindSpeed REAL
+);
+"""
