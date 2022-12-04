@@ -1,0 +1,16 @@
+pytest
+math
+re
+bs4
+matplotlib
+pandas
+numpy
+geopandas
+requests
+sqlalchemy
+math
+datetime
+warnings
+keplergl
+logging
+seaborn
