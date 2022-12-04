@@ -129,7 +129,6 @@ dmypy.json
 .pyre/
 
 *.parquet
-*.csv
 *.sqlite3
 *.sql
 *.db
